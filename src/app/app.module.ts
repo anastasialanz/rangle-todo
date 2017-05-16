@@ -15,6 +15,8 @@ import { routeConfig } from './app.routes';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ToDoDetailsComponent } from './to-do-details/to-do-details.component';
+import { MissionComponent } from './mission/mission.component';
+import { ClientsComponent } from './clients/clients.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { ToDoDetailsComponent } from './to-do-details/to-do-details.component';
     ToDoPageComponent,
     AboutComponent,
     ContactComponent,
-    ToDoDetailsComponent
+    ToDoDetailsComponent,
+    MissionComponent,
+    ClientsComponent
   ],
   imports: [
     BrowserModule,
