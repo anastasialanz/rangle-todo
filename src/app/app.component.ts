@@ -12,13 +12,6 @@ export class AppComponent {
     'Learn TypeScript'
   ];
 
-  constructor(private toDoService: ToDoService) {
-
-  }
-
-  onNewItem(item: string) {
-    this.toDoService.addItem(item);
-  }
 
   // summary(): string {
   //   return `${this.thingsToDo.length} to do / ${this.thingsCompleted.length} done`;
