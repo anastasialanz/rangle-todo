@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToDoService } from './to-do.service';
 
 @Component({
   selector: 'app-root',
@@ -7,21 +8,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Things to Do';
-  thingsToDo = [
-    'Learn JavaScript',
-    'Learn Angular',
-    'Learn Redux',
-    'Learn Patience'
-  ];
   thingsCompleted = [
     'Learn TypeScript'
   ];
 
-  onNewItem(item: string) {
-    this.thingsToDo.push(item);
+  constructor(private toDoService: ToDoService) {
+
   }
 
-  summary(): string {
-    return `${this.thingsToDo.length} to do / ${this.thingsCompleted.length} done`;
+  onNewItem(item: string) {
+    this.toDoService.addItem(item);
   }
+
+  // summary(): string {
+  //   return `${this.thingsToDo.length} to do / ${this.thingsCompleted.length} done`;
+  // }
 }
